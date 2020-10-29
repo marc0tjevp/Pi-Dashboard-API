@@ -1,9 +1,14 @@
 version: '2'
 services:
-  example_service:
+  
+  dashboard-api:
     build: .
-    ports:
-      - '8080:8080'
+    expose:
+      - 80
+    environment:
+      VIRTUAL_HOST: dashboard.cloudpotato.nl
+      LETSENCRYPT_HOST: dashboard.cloudpotato.nl
+      LETSENCRYPT_EMAIL: marc0tjevp@gmail.com
     depends_on:
       - mongo
   mongo:
