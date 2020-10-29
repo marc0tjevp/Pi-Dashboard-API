@@ -1,11 +1,15 @@
 require('dotenv').config({ path: './.env.local' });
 
 const express = require('express');
+const cors = require('cors');
+
 const config = require('./config/config.json');
 const routes = require('./routes/routes');
 
 const port = process.env.PORT || config.port;
 const app = express();
+
+app.use(cors('*'));
 
 module.exports = app;
 
