@@ -8,5 +8,5 @@ COPY package*.json ./
 RUN yarn install
 
 COPY . .
-EXPOSE 8080
+EXPOSE 80
 CMD [ "node", "server.js" ]
