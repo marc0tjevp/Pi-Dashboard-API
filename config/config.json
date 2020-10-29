@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "databases": {
+    "mongo": "mongodb://mongo:27017/dashboard"
+  }
+}
